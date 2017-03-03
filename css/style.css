@@ -1,5 +1,18 @@
 /* elements */
-
+body {
+  background: url("http://i.imgur.com/Lsg8aD3.jpg");
+  font-family: Roboto;
+  color: white;
+}
+h1, h5 {
+  font-family: Shadows;
+}
+h3{
+  text-decoration: underline;
+}
+a {
+ text-decoration: none; 
+}
 /* classes */
 
 /* IDs */

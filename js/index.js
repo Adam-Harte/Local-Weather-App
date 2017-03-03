@@ -4,6 +4,7 @@ $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
   var lon = data.lon;
   getWeather(lat, lon);
 });
+
 //api call pasing in lat and lon to get local weather
 //api weather temp starts at fahrenheit
 function getWeather(lat, lon) {
@@ -35,28 +36,28 @@ function getWeather(lat, lon) {
     //change wind html function as it is removing the a tag for speed conversion
     $(".wind").html(windKmh);
     $(".humidity").html(humidity);
-    
-     getBackground(icon);
    
-    $(".tempConversion").on('click', function() {
+    getBackground(icon);
+    
+    $(".temp-conversion").on('click', function() {
       if (tempSwap === false) {
         $(".temp").html(tempC);
-        $(".tempConversion").html(" &#8451;");
+        $(".temp-conversion").html(" &#8451;");
         tempSwap = true;
       } else {
         $(".temp").html(tempF);
-        $(".tempConversion").html(" &#8457;");
+        $(".temp-conversion").html(" &#8457;");
         tempSwap = false;
       }
     });
-    $(".speedConversion").on('click', function() {
+    $(".speed-conversion").on('click', function() {
       if (speedSwap === false) {
         $(".wind").html(windMph);
-        $(".speedConversion").html(" Mph");
+        $(".speed-conversion").html(" Mph");
         speedSwap = true;
       } else {
         $(".wind").html(windKmh);
-        $(".speedConversion").html(" Kmh");
+        $(".speed-conversion").html(" Kmh");
         speedSwap = false;
       }
       
@@ -66,14 +67,13 @@ function getWeather(lat, lon) {
 
 }
 //function to get and assing the correct background image based on the time of day
-function getBackground(icon) {
-  if (icon.includes("d")) {
-    //add jquery css day background
-    console.log("day time");
-    $(body).css('background-color', 'blue');
-  } else {
-    //add jquery css night background
-    console.log("night time");
-    $(body).css('background-color', 'black');
+function getBackground(icon){
+  if(icon.includes("d")){
+    $("body").css("background", "url('http://i.imgur.com/Lsg8aD3.jpg')");
+  }
+  else{
+    $("body").css("background", "url('http://i.imgur.com/tMVGqP6.jpg')");
   }
 }
+//http://i.imgur.com/PhFQkdl.png
+//http://i.imgur.com/tMVGqP6.jpg

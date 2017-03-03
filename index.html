@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Local Weather</title>
-  
+   <link href="https://fonts.googleapis.com/css?family=Shadows" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
@@ -14,13 +15,13 @@
 
 <body>
   <body>
-  <div class="container-fluid">
+  <div class="container">
     <div class="text-center">
       <h1>Local Weather App</h1>
     </div>
     <div class="text-center">
-      <p class="city"></p>
-      <p class="location">h</p>
+      <h2 class="city"></h2>
+      <h2 class="location"></h2>
     </div>
     <div class="text-center">
       <p class="description"></p>
@@ -29,13 +30,20 @@
       
     </div>
     <div class="text-center">
-      <span class="temp"></span><a class="tempConversion" href=#> &#8457; </a>
+      <span class="temp"></span><a class="temp-conversion" href=#> &#8457; </a>
     </div>
     <div class="details">
-      <span class="wind"></span><a class="speedConversion" href=#> Kmh </a>
-      <span class="humidity float-right"></span>
+      <h3>Wind</h3>
+      <span class="wind"></span><a class="speed-conversion" href=#> Kmh </a>
+      <h3 class="text-right">Humidity</h3>
+      <p class="humidity text-right"></p>
     </div>
   </div>
+  <footer class="navbar navbar-fixed-bottom">
+    <div class="container">
+      <h5 class="text-center">Coded by Adam Harte</h5>
+    </div>
+  </footer>
 </body>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
